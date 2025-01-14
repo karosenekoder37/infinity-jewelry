@@ -41,7 +41,7 @@ export type Metadata = {
           ? `https://${process.env.VERCEL_URL}`
           : `${process.env.NEXT_PUBLIC_BASE_URL}`; 
 
-      const successUrl = `${baseUrl}/success?rderNumber=${metadata.orderNumber}&session_id={CHECKOUT_SESSION_ID}`;
+      const successUrl = `${baseUrl}/success?orderNumber=${metadata.orderNumber}&session_id={CHECKOUT_SESSION_ID}`;
 
       const cancelUrl = `${baseUrl}/cart`;
 
