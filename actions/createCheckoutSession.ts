@@ -39,9 +39,8 @@ export type Metadata = {
 
       const baseUrl =
         process.env.NODE_ENV === 'production'
-          ? `https://${process.env.VERCEL_URL}`  // Will work for production, assuming you don't have a fixed NEXT_PUBLIC_BASE_URL
-          : process.env.VERCEL_URL || 'http://localhost:3000';  // Local dev or fallback
-
+          ? process.env.VERCEL_URL
+          : process.env.NEXT_PUBLIC_BASE_URL;
 
       const successUrl = `${baseUrl}/success?session_id={CHECKOUT_SESSION_ID}&orderNumber=${metadata.orderNumber}`;
 
