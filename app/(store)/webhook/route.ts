@@ -5,9 +5,6 @@ import { headers } from "next/headers";
 import { NextRequest, NextResponse } from "next/server";
 import Stripe from "stripe";
 
-const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
-const endPointSecret = "whsec_xnw0DaAG3K8VcP1SUaCbjbpcpMGfgpCt";
-
 export async function POST(req: NextRequest) {
   const body = await req.text();
   const headersList = await headers();
