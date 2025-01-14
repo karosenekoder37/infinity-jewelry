@@ -39,8 +39,8 @@ export type Metadata = {
 
       const baseUrl =
         process.env.NODE_ENV === 'production'
-          ? process.env.VERCEL_URL
-          : process.env.NEXT_PUBLIC_BASE_URL;
+          ? process.env.NEXT_PUBLIC_BASE_URL  
+          : process.env.NEXT_PUBLIC_BASE_URL; 
 
       const successUrl = `${baseUrl}/success?session_id={CHECKOUT_SESSION_ID}&orderNumber=${metadata.orderNumber}`;
 
