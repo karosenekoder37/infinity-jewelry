@@ -17,7 +17,6 @@ async function ProductPage({
 }) {
   const { slug } = await params;
   const product = await getProductBySlug(slug);
-  console.log("PROD:", product);
 
   if (!product) {
     return notFound();
