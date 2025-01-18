@@ -8,6 +8,7 @@ export const revalidate = 3600;
 
 export default async function Home() {
   const products = await getAllProducts();
+  console.log("THESE ARE THE PRODUCTS WE GOT:", products);
   const categories = await getAllCategories();
 
   return (
