@@ -13,7 +13,7 @@ import {
   Metadata,
 } from "@/actions/createCheckoutSession";
 
-console.log(`https://${process.env.VERCEL_URL}`);
+console.log(`${process.env.NEXT_PUBLIC_VERCEL_URL}`);
 console.log(`${process.env.NEXT_PUBLIC_BASE_URL}`);
 
 function BasketPage() {
