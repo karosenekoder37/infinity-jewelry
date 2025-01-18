@@ -8,7 +8,13 @@ import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { imageUrl } from "@/lib/imageUrl";
 import Loader from "@/components/Loader";
-import { createCheckoutSession, Metadata } from "@/actions/createCheckoutSession";
+import {
+  createCheckoutSession,
+  Metadata,
+} from "@/actions/createCheckoutSession";
+
+console.log(`https://${process.env.VERCEL_URL}`);
+console.log(`${process.env.NEXT_PUBLIC_BASE_URL}`);
 
 function BasketPage() {
   const groupedItems = useBasketStore((state) => state.getGroupedItems());
