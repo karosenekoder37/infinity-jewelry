@@ -9,6 +9,7 @@ export const getProductBySlug = async (slug: string) => {
         `)
 
     try {
+        console.log("PROD:",PRODUCT_BY_ID_QUERY);
         const product = await sanityFetch({
             query: PRODUCT_BY_ID_QUERY,
             params: {
