@@ -8,7 +8,7 @@ import Stripe from "stripe";
 export async function POST(req: NextRequest) {
   const body = await req.text();
   const headersList = await headers();
-  const sig = headersList.get("Stripe-signature");
+  const sig = headersList.get("stripe-signature");
 
   if (!sig) {
     return NextResponse.json({error: "No signature"}, { status: 400});
