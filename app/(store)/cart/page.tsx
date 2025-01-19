@@ -13,9 +13,6 @@ import {
   Metadata,
 } from "@/actions/createCheckoutSession";
 
-console.log(`${process.env.NEXT_PUBLIC_VERCEL_URL}`);
-console.log(`${process.env.NEXT_PUBLIC_BASE_URL}`);
-
 function BasketPage() {
   const groupedItems = useBasketStore((state) => state.getGroupedItems());
   const { isSignedIn } = useAuth();
@@ -37,9 +34,7 @@ function BasketPage() {
   if (groupedItems.length === 0) {
     return (
       <div className="container mx-auto p-4 flex flex-col items-center justify-center min-h-[50vh]">
-        <h1 className="text-2xl font-bold mb-6  text-gray-800">
-          Your Cart {process.env.VERCEL_URL} {process.env.NEXT_PUBLIC_BASE_URL}
-        </h1>
+        <h1 className="text-2xl font-bold mb-6  text-gray-800">Your Cart</h1>
         <p className="text-gray-600 text-lg">Your cart is empty</p>
       </div>
     );
